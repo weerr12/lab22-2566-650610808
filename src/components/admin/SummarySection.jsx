@@ -59,7 +59,7 @@ export const SummarySection = () => {
           </Group>
           <Stack spacing={0}>
             {summaryStat.enrollmentCountByStudent.map((student) => (
-              <Text>
+              <Text key={student.studentId}>
                 {student.studentId} - {student.firstName} {student.lastName}{" "}
                 {student._count.enrollments} course(s)
               </Text>
